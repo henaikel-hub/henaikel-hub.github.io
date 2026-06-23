@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-itunes-app" content="app-id=6772350310" />
+  <title>Sticker Swap — StickerAtlas</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(160deg, #071f17 0%, #0b3d2e 35%, #11603f 70%, #1c7a4f 100%);
+      color: #fff;
+      text-align: center;
+      padding: 48px 24px 40px;
+    }
+
+    .icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 21px;
+      overflow: hidden;
+      margin: 0 auto 22px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .icon img { width: 100%; height: 100%; display: block; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(74, 222, 128, 0.15);
+      border: 1px solid rgba(74, 222, 128, 0.35);
+      border-radius: 100px;
+      padding: 5px 14px 5px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #86efac;
+      margin-bottom: 20px;
+    }
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      flex-shrink: 0;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
+    }
+
+    h1 {
+      font-size: clamp(24px, 6vw, 32px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 320px;
+      margin: 0 auto 36px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 18px;
+      padding: 20px 22px;
+      max-width: 340px;
+      width: 100%;
+      margin: 0 auto 32px;
+    }
+    .card-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+    }
+    .card-row + .card-row {
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    .card-icon.green { background: rgba(74, 222, 128, 0.18); }
+    .card-icon.amber { background: rgba(251, 191, 36, 0.18); }
+    .card-text { text-align: left; }
+    .card-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2px;
+    }
+    .card-value {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.35;
+    }
+
+    .appstore-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #fff;
+      color: #071f17;
+      border-radius: 16px;
+      padding: 15px 28px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      max-width: 340px;
+      width: 100%;
+      margin: 0 auto;
+      transition: transform 0.15s ease, background 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .appstore-btn:active { transform: scale(0.97); background: #f0f0f0; }
+    .appstore-btn .apple-logo { flex-shrink: 0; }
+
+    .footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      line-height: 1.6;
+    }
+    .footer a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="icon">
+    <img src="../icon-1024.png" alt="StickerAtlas app icon" />
+  </div>
+
+  <div class="badge">
+    <span class="badge-dot"></span>
+    Swap invitation
+  </div>
+
+  <h1>Someone wants to<br>trade stickers with you!</h1>
+  <p class="subtitle">
+    Download StickerAtlas to see what they have and what they need —
+    then find your perfect swap in seconds.
+  </p>
+
+  <div class="card">
+    <div class="card-row">
+      <div class="card-icon green">🟢</div>
+      <div class="card-text">
+        <div class="card-label">Their duplicates</div>
+        <div class="card-value">Stickers they have extra — ready to give you</div>
+      </div>
+    </div>
+    <div class="card-row">
+      <div class="card-icon amber">🟡</div>
+      <div class="card-text">
+        <div class="card-label">Their missing</div>
+        <div class="card-value">Stickers they still need — maybe you have them</div>
+      </div>
+    </div>
+  </div>
+
+  <a class="appstore-btn" href="https://apps.apple.com/app/apple-store/id6772350310?pt=117247809&ct=swap-link&mt=8">
+    <svg class="apple-logo" width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.462 12.607c-.022-2.556 2.09-3.786 2.183-3.843-1.19-1.736-3.042-1.974-3.7-1.998-1.573-.16-3.076.928-3.874.928-.797 0-2.028-.908-3.338-.881-1.707.026-3.293.999-4.174 2.524-1.788 3.095-.457 7.674 1.282 10.185.851 1.228 1.858 2.6 3.183 2.548 1.28-.052 1.762-.822 3.31-.822 1.55 0 1.988.822 3.34.797 1.376-.026 2.244-1.243 3.083-2.474.978-1.421 1.383-2.8 1.405-2.871-.031-.013-2.69-1.038-2.7-4.093z" fill="#071f17"/>
+      <path d="M13.972 4.47c.706-.86 1.183-2.05 1.052-3.239-1.018.042-2.247.677-2.974 1.534-.653.752-1.223 1.948-1.07 3.096 1.134.088 2.292-.577 2.992-1.391z" fill="#071f17"/>
+    </svg>
+    Download on the App Store
+  </a>
+
+  <div class="footer">
+    &copy; 2026 Erick Vargas &middot;
+    <a href="https://henaikel-hub.github.io">StickerAtlas: Soccer 2026</a>
+  </div>
+</body>
+</html>
