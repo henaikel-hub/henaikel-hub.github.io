@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["56CTSZWNTV.com.henkelito.StickerAtlas"],
+        "components": [
+          { "/": "/swap*" }
+        ]
+      }
+    ]
+  }
+}
